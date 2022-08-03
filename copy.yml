@@ -4,7 +4,7 @@
   tasks:
     - name: copying file with playbook
       copy:
-        src: /home/ec2-user/Fc2_repo/test.sh
+        src: /var/lib/jenkins/workspace/Ansible_FC/test.sh
         dest: /home/ec2-user/
         mode: '777'
     - name: Run shell script
