@@ -1,0 +1,13 @@
+- hosts: uat
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name: copying file with playbook
+      copy:
+        src: /home/ec2-user/sample/
+        dest: /home/ec2-user/
+        mode: '777'
+    - name: Run shell script
+      command: sh /home/ec2-user/backup.sh
+    - name: Run deploy shell script    
+      command: sh /home/ec2-user/deploy.sh
