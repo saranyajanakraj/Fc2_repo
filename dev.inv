@@ -1,2 +1,2 @@
-[uat]
+[all]
 172.31.3.198 ansible_user=ec2-user
