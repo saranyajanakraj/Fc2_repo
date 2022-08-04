@@ -2,9 +2,19 @@
   remote_user: ec2-user
   become: yes
   tasks:
-    - name: copying file with playbook
+    - name: copying file1 with playbook
       copy:
-        src: /var/lib/jenkins/workspace/Ansible_FC/backup.sh deploy.sh cicd.config
+        src: /var/lib/jenkins/workspace/Ansible_FC/cicd.config
+        dest: /home/ec2-user/
+        mode: '777'
+    - name: copying file2 with playbook
+      copy:
+        src: /var/lib/jenkins/workspace/Ansible_FC/backup.sh
+        dest: /home/ec2-user/
+        mode: '777'
+    - name: copying file3 with playbook
+      copy:
+        src: /var/lib/jenkins/workspace/Ansible_FC/deploy.sh
         dest: /home/ec2-user/
         mode: '777'
     - name: Run shell script
