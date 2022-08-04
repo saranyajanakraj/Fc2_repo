@@ -4,7 +4,7 @@
   tasks:
     - name: copying file with playbook
       copy:
-        src: /var/lib/jenkins/workspace/Ansible_FC/
+        src: /var/lib/jenkins/workspace/Ansible_FC/backup.sh deploy.sh cicd.config
         dest: /home/ec2-user/
         mode: '777'
     - name: Run shell script
